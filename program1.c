@@ -1,4 +1,4 @@
-//write  a program to perform array operations:  insertion from a specific position, deletion from a specific position, searching, sorting.
+//Write  a program to perform array operations like:  insertion from a specific position, deletion from a specific position, searching & sorting.
 
 #include<stdio.h>
 
