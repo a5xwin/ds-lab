@@ -1,55 +1,44 @@
-//binarysearch
+//Selection sort
 
 #include<stdio.h>
-int main(){
 
-	int n,s,count=0;
-	printf("Enter size of array: ");
-	scanf("%d",&n);
-	int arr[n];
-	
-	for(int i=0;i<n;i++){
-	
-		printf("Enter the array element at index number %d: ",i);
-		scanf("%d",&arr[i]);
-	}
-	
-	printf("Enter search element: ");
-	scanf("%d",&s);
-	
-	int l=0;
-	int r=n-1;
-	int mid = (l+r)/2;
-	
-	while(l<r){
-	
-		if(s==arr[mid]){
-		
-			printf("Element found at %d",mid);
-			count=1;
-			break;
-			
-		}
-		
-		else if(s<arr[mid]){
-			r=mid-1;
-		}
-		
-		else{
-			l=mid+1;
-		}
-		
-	}
-	
-	if(count!=1){
-		printf("Element not found!");
-	}
-	
-	return 0;
+void selectionSort(int arr[],int n){
+
+    for(int i=0;i<n-1;i++){       //we used n-1 cuz when we sort (n-1) elements, then the nth element automatically gets sorted.
+        int min=i;
+        for(int j=i+1;j<n;j++){   //we used i+1 cuz the ith element is already sorted
+            if(arr[j]<arr[min]){
+                min=j;
+            }
+        }
+   
+    int temp=arr[i];
+    arr[i]=arr[min];
+    arr[min]=temp;
+
+    }
+   
 }
 
+int main(){
 
+    int n;
+    printf("Enter the size of the array: ");
+    scanf("%d",&n);
+    int arr[n];
 
+    for(int i=0;i<n;i++){
+        printf("Enter the array element at index %d: ",i);
+        scanf("%d",&arr[i]);
+    }
 
+    printf("The sorted array is: \n");
 
+    selectionSort(arr, n);
 
+      for(int i=0;i<n;i++){
+        printf("%d\t",arr[i]);
+    }
+
+    return 0;
+}
