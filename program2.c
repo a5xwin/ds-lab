@@ -1,3 +1,5 @@
+//Write a program to create a student structure and input marks of 5 subjects, and then sort the structure using bubble sort to find out the sorted marks.
+
 #include<stdio.h>
 
 struct Student {
