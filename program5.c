@@ -18,9 +18,9 @@ int main(){
     printf("Enter the highest degree of the second polynomial: ");  //highest degree of 2nd polynomial
     scanf("%d",&hd2);                  //hd2=highest degree of 2nd polynomial
 
-    struct Poly poly1[hd1];     //declares an array of structures named poly1, where each element of the array poly1 is a structure of type Poly. hd1 indicates the size of the array.
-    struct Poly poly2[hd2];
-    struct Poly sum[hd1+hd2];
+    struct Poly poly1[hd1+1];     //declares an array of structures named poly1, where each element of the array poly1 is a structure of type Poly. hd1+1 indicates the size of the array.
+    struct Poly poly2[hd2+1];
+    struct Poly sum[hd1+hd2+1];
     
     int nt1,nt2;
 
